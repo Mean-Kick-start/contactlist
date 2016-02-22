@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demoApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/angular.js"></script>
+    <script src="contactlist.js"></script>
+    <script src="js/jquery-2.2.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Contact List Example </title>
+</head>
+<body>
+<h1 class="container">Contacts List CRUD properties</h1><br>
+<div ng-controller="myController" class="container">
+    <label> Name: <input type="text"  ng-model="contact.name"/></label>
+    <label> Number:<input type="number"  ng-model="contact.number"/></label>
+    <label> Gender:<input type="text"  ng-model="contact.gender"/></label>
+    <input type="button"  class="btn btn-primary" value="Add" ng-click="addContact()"/>
+    <input type="button" class="btn btn-primary" value="Update" ng-click="updateContact()"/>
+    <input type="button" class="btn btn-primary" value="Clear" ng-click="deselect()"/>
+
+    <table class="table">
+        <thead>
+
+        <th>Name</th>
+        <th>number</th>
+        <th>gender</th>
+        <th>Action</th>
+        <th></th>
+        </thead>
+        <tbody>
+        <tr ng-repeat="contact in contactlist">
+             <td>{{contact.name}}</td>
+            <td>{{contact.number}}</td>
+            <td>{{contact.gender}}</td>
+            <td><input type="button"  class="btn btn-danger" value="Delete" ng-click="deleteContact(contact._id)"/></td>
+            <td><input type="button"  class="btn btn-primary" value="Edit" ng-click="edit(contact._id)"/></td>
+        </tr>
+        </tbody>
+        </table>
+</div>
+</body>
+
+</html>

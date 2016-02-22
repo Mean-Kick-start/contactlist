@@ -1,0 +1,78 @@
+body{
+				background: lightgray;
+				color: blue;
+			}
+			#pagetitle{
+				background: red; 
+				color: yellow;
+			}
+			.pageTitlePrimary{
+				background: blue !important; 
+				color: white  !important;
+			}
+
+			h2.pageTitleStyle{
+				background: green; 
+				color: white;
+				padding: 10px;
+				margin: 20px;
+				font-size: 20px;
+				font-family: arial;
+				font-variant: small-caps;
+				font-weight: normal;
+				
+			}
+
+			.siteHeader{
+				border: dotted 1px red;
+				width: 100%;
+				height: 80px;
+			}
+
+			.strike{
+				text-decoration: line-through;
+			}
+
+			.italic{
+				font-style: italic;
+			}
+
+			.underline{
+				text-decoration: underline;
+			}
+
+			.overline{
+				text-decoration: overline;
+			}
+
+			.fontBold{
+				font-weight: bold;
+			}
+
+			.content {
+				width: 100%;
+				padding: 10px;
+				margin: 0px;
+
+			}
+
+			.content h2{
+				background: gold; 
+				color: black;
+				font-size: 18px;
+				font-family: verdana;
+				font-weight: bold;
+
+			}
+
+			.content p{
+				font-size: 12px;
+				font-family: verdana;
+				font-weight: bold;
+				color: green;
+			}
+
+			.alignTop{
+				vertical-align: top;
+				padding: 20px 5px 10px 15px;
+			}
