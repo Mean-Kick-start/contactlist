@@ -30,13 +30,14 @@
         <th>number</th>
         <th>Action</th>
         <th></th>
+        <th></th>
         </thead>
         <tbody>
         <tr ng-repeat="contact in contactlist">
              <td>{{contact.name}}</td>
             <td>{{contact.email}}</td>
             <td>{{contact.number}}</td>
-            <td><input type="button"  class="btn btn-danger" value="Delete" ng-click="deleteContact(contact._id)"/></td>
+            <td><input type="button"  class="btn btn-danger" value="Remove" ng-click="deleteContact(contact._id)"/></td>
             <td><input type="button"  class="btn btn-primary" value="Edit" ng-click="edit(contact._id)"/></td>
         </tr>
         </tbody>
