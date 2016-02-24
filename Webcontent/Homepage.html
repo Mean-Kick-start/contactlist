@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="HomeApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/angular.js"></script>
+    <script src="js/Homepage.js"></script>
+    <script src="js/jquery-2.2.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/Signup.css" rel="stylesheet">
+    <link href="css/logo-nav.css" rel="stylesheet">
+    <title>Home</title>
+    <style>
+        body{
+            background-image: url("css/welcome%20page.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+    <body ng-controller="HomeController">
+                        <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top container" role="navigation">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#login">Login</a>
+                </li>
+                <li>
+                    <a href="#signup">SignUp</a>
+                </li>
+            </ul>
+    </nav>
+                    <!-- Page Content -->
+    <div class="container">
+        <div ng-view></div>
+    </div>
+</body>
+</html>

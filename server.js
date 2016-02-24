@@ -4,6 +4,7 @@ var mongojs=require('mongojs');
 var bodyparser=require('body-parser');
 app.use(bodyparser.json());
 var db = mongojs('contactList',['contactList']);
+var db2 = mongojs('users',['users']);
 app.get('/contactlist', function(req, res){
     console.log('Hello listening to the get request');
    db.contactList.find(function(err, docs){
@@ -38,6 +39,12 @@ app.put('/contactlist/:id' , function(req, res){
         new: true},function(err,docs){
         res.json(docs);
     })
+});
+app.post('/signup', function (req, res) {
+    console.log(req.body);
+    db2.users.insert(req.body , function(err, docs) {
+        res.json(docs);
+    });
 });
 app.listen(3000);
 console.log('Server 3000 is up and listening');
